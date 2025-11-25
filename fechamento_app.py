@@ -5,8 +5,7 @@ from datetime import date, timedelta
 import numpy as np
 import plotly.express as px
 from langchain_agent import create_agent, run_agent # Importando as funções do agente
-from model_definition import OneHotEncoder, ColumnTransformer, Pipeline, GradientBoostingRegressor
-
+from model_destination import OneHotEncoder, ColumnTransformer, Pipeline, GradientBoostingRegressor
 
 # --- Configurações Iniciais ---
 st.set_page_config(layout="wide", page_title="Previsão de Fechamento de Oportunidades")
