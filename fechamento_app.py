@@ -4,6 +4,10 @@ import joblib
 from datetime import date, timedelta
 import numpy as np
 import plotly.express as px
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import GradientBoostingRegressor
 from langchain_agent import create_agent, run_agent # Importando as funções do agente
 
 # --- Configurações Iniciais ---
