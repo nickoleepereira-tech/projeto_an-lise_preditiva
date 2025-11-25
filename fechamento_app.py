@@ -5,7 +5,16 @@ from datetime import date, timedelta
 import numpy as np
 import plotly.express as px
 from langchain_agent import create_agent, run_agent # Importando as funções do agente
-from model_destination import OneHotEncoder, ColumnTransformer, Pipeline, GradientBoostingRegressor
+# ----------------------------------------------------------------------
+# NOVO MÓDULO: Importar as classes diretamente do scikit-learn
+# Elas são necessárias para que joblib.load consiga reconstruir o Pipeline
+# ----------------------------------------------------------------------
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import GradientBoostingRegressor
+# from model_destination import OneHotEncoder, ColumnTransformer, Pipeline, GradientBoostingRegressor <-- REMOVA ESTA LINHA
+# ----------------------------------------------------------------------
 
 # --- Configurações Iniciais ---
 st.set_page_config(layout="wide", page_title="Previsão de Fechamento de Oportunidades")
